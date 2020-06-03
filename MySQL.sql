@@ -9,7 +9,7 @@ CREATE TABLE users(
 );
 CREATE TABLE paragraphs(
 	id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    	paragraph text(65535) UNIQUE NOT NULL
+    	paragraph text(65535) NOT NULL
 );
 -- CREATE TABLE images(id int PRIMARY KEY NOT NULL AUTO_INCREMENT,link varchar(255) UNIQUE NOT NULL);
 CREATE TABLE components(
@@ -77,7 +77,7 @@ VALUES('Welcome Dear Recruiter');
 INSERT INTO contents(id_user,id_page,component_number,id_component,id_paragraph)
 VALUES(1,1,1,4,1);
 INSERT INTO paragraphs(paragraph)
-VALUES('This website has been made especially for you. I created this website using Vue.js(HTML, CSS and Javascript), BootstrapVue, Flask(Python) and MySQL. It is a complete example of my programming skills, this website took 24 hours to be done and it was my personal challenge, I am happy that this is now a dream made true and you are here. I encourage you to go through the different elements in this website and hoover on them, you will find many images that will help you to get closer to me. I hope you enjoy this website and I will wait for your call to go further on my hiring process.');
+VALUES('This website has been made especially for you. I created this website using Vue.js(HTML, CSS and Javascript), BootstrapVue, Flask(Python), AWS RDS MySQL and AWS Elastic Beanstalk. It is a complete example of my programming skills, this website took 24 hours to be done and it was my personal challenge, I am happy that this is now a dream made true and you are here. I encourage you to go through the different elements in this website and hoover on them, you will find many images that will help you to get closer to me. I hope you enjoy this website and I will wait for your call to go further on my hiring process.');
 INSERT INTO contents(id_user,id_page,component_number,id_component,id_paragraph)
 VALUES(1,1,2,4,2);
 
@@ -139,7 +139,7 @@ VALUES(1,2,4,4,14);
 INSERT INTO paragraphs(paragraph)
 VALUES('Goal oriented');
 INSERT INTO paragraphs(paragraph)
-VALUES('I always wanted to teach Statistics when I was in university. To become a tutor I needed good grades in this subject, and I got them. I worked for the university during the last year. after I completed university, I started a successful company called Facilestadistica focus on private tutoring with which I earned a good monthly salary.');
+VALUES('I always wanted to teach Statistics when I was in university. To become a tutor I needed good grades in this subject, and I got them. I worked for the university during the last year. After I completed university, I started a successful company called Facilestadistica focus on private tutoring with which I earned a good monthly salary.');
 INSERT INTO paragraphs(paragraph)
 VALUES('When I came to New Zealand, I set the goal of getting 7 in the IELTS exam in 6 months, even though I came here with not a good level of English, I was successful. I worked hard to achieve it, and I outperformed everyone in my courses. I started on Intermediate 1 in NZLC, however, due to my performance, I got the advance level in 4 months when it usually takes 5 months.');
 INSERT INTO paragraphs(paragraph)

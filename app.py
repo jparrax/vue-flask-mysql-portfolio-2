@@ -19,7 +19,7 @@ mysql = MySQL(app)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 # sanity check route
-@app.route('/header', methods=['GET'])
+@app.route('/Header', methods=['GET'])
 def header():
     cur = mysql.connection.cursor()
     cur.execute('''
@@ -34,7 +34,7 @@ def header():
     return jsonify(rows)
 
 # sanity check route
-@app.route('/home', methods=['GET'])
+@app.route('/Home', methods=['GET'])
 def home():
     cur = mysql.connection.cursor()
     cur.execute('''
@@ -49,7 +49,7 @@ def home():
     rows = cur.fetchall()
     return jsonify(rows)
 
-@app.route('/experience', methods=['GET'])
+@app.route('/Experience', methods=['GET'])
 def experience():
     cur = mysql.connection.cursor()
     cur.execute('''
@@ -64,7 +64,7 @@ def experience():
     rows = cur.fetchall()
     return jsonify(rows)
 
-@app.route('/skills', methods=['GET'])
+@app.route('/Skills', methods=['GET'])
 def skills():
     cur = mysql.connection.cursor()
     cur.execute('''

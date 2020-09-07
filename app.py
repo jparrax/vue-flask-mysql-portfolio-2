@@ -49,6 +49,21 @@ def home():
     rows = cur.fetchall()
     return jsonify(rows)
 
+@app.route('/Video', methods=['GET'])
+def video():
+    cur = mysql.connection.cursor()
+    cur.execute('''
+    SELECT contents.id, users.user_name, pages.page, contents.component_number, components.component, paragraphs.paragraph
+    FROM ((((contents
+    INNER JOIN users on contents.id_user = users.id)
+    INNER JOIN pages on contents.id_page = pages.id)
+    INNER JOIN components on contents.id_component = components.id)
+    INNER JOIN paragraphs on contents.id_paragraph = paragraphs.id)
+    WHERE components.component = "video";
+    ''') 
+    rows = cur.fetchall()
+    return jsonify(rows)
+
 @app.route('/Experience', methods=['GET'])
 def experience():
     cur = mysql.connection.cursor()
